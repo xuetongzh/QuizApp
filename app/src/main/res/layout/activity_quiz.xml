@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".QuizActivity">
+
+    <TextView
+        android:id="@+id/quiz_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="#6E6E6E"
+        android:textSize="18sp" />
+
+
+    <TableRow
+        android:id="@+id/group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/quiz_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/number"
+            android:layout_width="wrap_content"
+            android:padding="10dp"
+            android:text="1/5"
+            android:textColor="#6E6E6E"
+            android:textSize="16sp" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:max="5"
+            android:min="0"
+            android:progress="3"
+            android:progressDrawable="@drawable/progressbar_uploading"
+            android:textColor="#6E6E6E" />
+    </TableRow>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/next"
+        android:layout_below="@+id/group"
+        android:layout_marginVertical="20dp"
+        android:paddingHorizontal="10dp"/>
+
+    <Button
+        android:id="@+id/next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="70dp"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/style_button"
+        android:text="Next"
+        android:textColor="#6E6E6E"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>
